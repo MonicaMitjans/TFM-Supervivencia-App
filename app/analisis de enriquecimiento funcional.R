@@ -1,6 +1,8 @@
-#pruebas de enriquecimiento funcional
-setwd("C:/Users/mitja/OneDrive/master bioinformatica/TFM/R_files/set de datos finales")
-getwd()
+#Validacion tecnica - enriquecimiento funcional
+#Monica Mitjans
+#TFM-Shiny App
+
+
 #cargar los datos a internal_data
 internal_data <- readRDS("datosdeexpresion.rds")
 identical(rownames(colData(internal_data)), colnames(internal_data)) #coinciden
@@ -16,6 +18,8 @@ library(limma)
 
 genes <- read.csv("genes_jak_stat_signaling.csv", header = FALSE, stringsAsFactors = FALSE)[, 1] #cambiar segun la firma genica a analizar
 
+
+#Enriquecimiento por subtipos
 #extraer datos de expresion y clinicos
 expr_matrix <- t(scale(t(assay(internal_data, "normalized")))) #extraer datos de expresión  escalados 
 column_data <- as.data.frame(colData(internal_data))
@@ -205,36 +209,5 @@ if (is.null(go_enrich) || nrow(as.data.frame(go_enrich)) == 0) {
     theme_minimal()
 }
 
-
-#################################################
-
-#asegurar que los genes son validos - gene symbol
-library(org.Hs.eg.db)
-#TGFB1 SEC14L3
-# Lista de símbolos de genes
-genesdepurueba <- c("MKI67", "SEC14L3")
-
-# Verificar si son válidos en la base de datos
-valid_symbols <- keys(org.Hs.eg.db, keytype = "SYMBOL")
-genesvalidos <- genesdepurueba[genesdepurueba %in% valid_symbols]
-
-# Mostrar genes válidos
-print(genesvalidos)
-
-
-library(org.Hs.eg.db)
-
-# Buscar símbolos similares en la base de datos
-pattern <- "PDCD1LG2"  # Reemplaza con el símbolo no válido
-possible_matches <- grep(pattern, keys(org.Hs.eg.db, keytype = "SYMBOL"), value = TRUE)
-
-# Mostrar resultados
-print(possible_matches)
-
-# Buscar usando alias
-alias_matches <- select(org.Hs.eg.db, keys = "TGFB1", keytype = "ALIAS", columns = c("SYMBOL", "GENENAME"))
-
-# Mostrar resultados
-print(alias_matches)
 
 

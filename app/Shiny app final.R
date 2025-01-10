@@ -1,4 +1,6 @@
-#######SHiny app
+#Shiny app para analsisi de supervivencia y enriquecimiento funcional
+#Monica Mitjans
+#TFM-Shiny App
 
 library(shiny)
 library(SummarizedExperiment)
@@ -8,10 +10,10 @@ library(survminer)
 
 #cargar los datos a internal_data
 internal_data <- readRDS("datosdeexpresion.rds")
-identical(rownames(colData(internal_data)), colnames(internal_data)) #coinciden
+identical(rownames(colData(internal_data)), colnames(internal_data)) #verificar cpincidencias
 scaled_matrix <- t(scale(t(assay(internal_data, "normalized"))))
 
-
+#Interfaz de usuario
 ui <- fluidPage(
   titlePanel("Análisis de Supervivencia y Enriquecimiento Funcional en Cáncer de Mama"),
   
@@ -69,6 +71,7 @@ ui <- fluidPage(
   )
 )
 
+#server
 server <- function(input, output, session) {
   
   # Cargar lista de genes del usuario
