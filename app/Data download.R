@@ -1,5 +1,6 @@
-
-getwd()
+#Descarga de datos de expresion y clinicos de TCGA
+#Monica Mitjans
+#TFM-Shiny App
 
 library(TCGAbiolinks)
 library(DT)
