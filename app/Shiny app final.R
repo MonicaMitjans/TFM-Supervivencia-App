@@ -1,4 +1,6 @@
-#######SHiny app
+#Shiny app para analsisi de supervivencia y enriquecimiento funcional
+#Monica Mitjans
+#TFM-Shiny App
 
 library(shiny)
 library(SummarizedExperiment)
