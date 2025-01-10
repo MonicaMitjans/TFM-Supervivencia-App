@@ -1,6 +1,6 @@
-#pruebas de enriquecimiento funcional
+#Validacion tecnica - enriquecimiento funcional
 
-getwd()
+
 #cargar los datos a internal_data
 internal_data <- readRDS("datosdeexpresion.rds")
 identical(rownames(colData(internal_data)), colnames(internal_data)) #coinciden
