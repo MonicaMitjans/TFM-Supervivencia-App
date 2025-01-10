@@ -1,4 +1,6 @@
 #Validacion tecnica - enriquecimiento funcional
+#Monica Mitjans
+#TFM-Shiny App
 
 
 #cargar los datos a internal_data
