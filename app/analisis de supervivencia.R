@@ -1,4 +1,4 @@
-
+#Validacion tecnica - Analisis de supervivencia
 #Analisis de suoervivencia en funcion a firmas genicas
 #cargar librerias necesarias
 library(survival)
