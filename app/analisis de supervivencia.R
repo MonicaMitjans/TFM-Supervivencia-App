@@ -1,4 +1,8 @@
 #Validacion tecnica - Analisis de supervivencia
+#Monica Mitjans
+#TFM-Shiny App
+
+
 #Analisis de suoervivencia en funcion a firmas genicas
 #cargar librerias necesarias
 library(survival)
