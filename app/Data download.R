@@ -1,4 +1,4 @@
-setwd("C:/Users/mitja/OneDrive/master bioinformatica/TFM/R_files")
+
 getwd()
 
 library(TCGAbiolinks)
