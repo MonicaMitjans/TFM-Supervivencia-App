@@ -29,6 +29,7 @@ Esta es una aplicación web Shiny que permite realizar análisis de supervivenci
      install.packages("BiocManager")
      BiocManager::install("SummarizedExperiment")
      ```
+    - Guarda el archivo datosdeexpresion.rds en el mismo directorio donde está el script de la aplicación (app.R).
     - Carga el archivo .rds
      ```r
      internal_data <- readRDS("datosdeexpresion.rds")
