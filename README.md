@@ -25,9 +25,12 @@ Esta es una aplicación web Shiny que permite realizar análisis de supervivenci
      if (!require("BiocManager", quietly = TRUE))
      install.packages("BiocManager")
      BiocManager::install("org.Hs.eg.db")
+     if (!require("BiocManager", quietly = TRUE))
+     install.packages("BiocManager")
+     BiocManager::install("SummarizedExperiment")
      ```
     - Carga el archivo .rds
-      ```r
+     ```r
      internal_data <- readRDS("datosdeexpresion.rds")
      ```
 
