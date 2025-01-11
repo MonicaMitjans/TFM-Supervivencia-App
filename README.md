@@ -41,6 +41,7 @@ Esta es una aplicación web Shiny que permite realizar análisis de supervivenci
      ```r
      shiny::runApp("app.R")
      ```
+3. **Sigue las intrucciones del manual de usuario**
 
 ## Contenido del repositorio
 
