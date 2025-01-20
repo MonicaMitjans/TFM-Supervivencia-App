@@ -37,15 +37,4 @@ query_clinical <- GDCquery(
 GDCdownload(query_clinical)
 clinical_tab_all <- GDCprepare(query_clinical)
 
-#see all tables
-names(clinical_tab_all)
 
-# columns from clinical_patient
-dplyr::glimpse(clinical_tab_all$clinical_patient_brca)
-
-unique(clinical_tab_all$clinical_patient_brca$er_status_by_ihc)
-
-unique(clinical_tab_all$clinical_patient_brca$her2_status_by_ihc)
-
-nrow(rowData(tcga_data))
-nrow(rowData(tcga_data))
